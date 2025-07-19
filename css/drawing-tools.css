@@ -1,0 +1,196 @@
+.drawing-tools {
+  padding: var(--spacing-xxl) 0;
+  background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
+  position: relative;
+}
+
+.drawing-tools::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-primary);
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+}
+
+.tool-card {
+  background: var(--white);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transition: all var(--transition-normal);
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.tool-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-secondary);
+  transform: scaleX(0);
+  transition: transform var(--transition-normal);
+}
+
+.tool-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--accent-color);
+}
+
+.tool-card:hover::before {
+  transform: scaleX(1);
+}
+
+.tool-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--gradient-secondary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin: 0 auto var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.tool-card:hover .tool-icon {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-lg), 0 0 20px rgba(0, 212, 170, 0.3);
+}
+
+.tool-card h3 {
+  color: var(--dark-gray);
+  margin-bottom: var(--spacing-md);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.tool-card p {
+  color: var(--gray);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Business tool specific animations */
+.tool-card:nth-child(1) .tool-icon {
+  animation-delay: 0s;
+  background: var(--gradient-secondary);
+}
+
+.tool-card:nth-child(2) .tool-icon {
+  animation-delay: 0.5s;
+  background: var(--gradient-business);
+}
+
+.tool-card:nth-child(3) .tool-icon {
+  animation-delay: 1s;
+  background: var(--gradient-primary);
+}
+
+.tool-card:nth-child(4) .tool-icon {
+  animation-delay: 1.5s;
+  background: var(--gradient-gold);
+}
+
+/* Business simulation effects */
+.tool-card:hover {
+  background: linear-gradient(
+    135deg,
+    var(--white) 0%,
+    rgba(0, 212, 170, 0.05) 100%
+  );
+}
+
+.tool-card:hover h3 {
+  background: var(--gradient-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Arcade-style glow effects */
+@keyframes businessGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px var(--accent-color);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--accent-color), 0 0 30px var(--accent-color);
+  }
+}
+
+.tool-card:hover .tool-icon {
+  animation: businessGlow 2s ease-in-out infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .drawing-tools {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .tools-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .tool-card {
+    padding: var(--spacing-lg);
+  }
+
+  .tool-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tool-card {
+    padding: var(--spacing-md);
+  }
+
+  .tool-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .tool-card h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Business analytics effects */
+.tool-card:nth-child(1):hover {
+  border-color: var(--accent-color);
+}
+
+.tool-card:nth-child(2):hover {
+  border-color: var(--dark-blue);
+}
+
+.tool-card:nth-child(3):hover {
+  border-color: var(--primary-color);
+}
+
+.tool-card:nth-child(4):hover {
+  border-color: var(--gold);
+}

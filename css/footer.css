@@ -1,0 +1,280 @@
+.footer {
+  background: linear-gradient(135deg, var(--dark-gray) 0%, var(--black) 100%);
+  color: var(--white);
+  padding: var(--spacing-xl) 0 var(--spacing-lg);
+  border-top: 3px solid var(--primary-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-primary);
+  animation: arcadeGlow 3s ease-in-out infinite;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+.footer-section h3 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  margin-bottom: var(--spacing-md);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.footer-section h3::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: var(--gradient-primary);
+}
+
+.footer-section p {
+  color: var(--silver);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-sm);
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: var(--spacing-xs);
+}
+
+.footer-section ul li a {
+  color: var(--silver);
+  text-decoration: none;
+  transition: all var(--transition-normal);
+  display: inline-block;
+  padding: var(--spacing-xs) 0;
+  position: relative;
+}
+
+.footer-section ul li a:hover {
+  color: var(--primary-color);
+  transform: translateX(5px);
+  text-shadow: 0 0 8px var(--primary-color);
+}
+
+.footer-section ul li a::before {
+  content: "▶";
+  position: absolute;
+  left: -15px;
+  opacity: 0;
+  transition: all var(--transition-normal);
+  color: var(--primary-color);
+}
+
+.footer-section ul li a:hover::before {
+  opacity: 1;
+  left: -20px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-xs) 0;
+}
+
+.contact-icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  font-size: 0.8rem;
+  color: var(--white);
+  flex-shrink: 0;
+}
+
+.contact-item a {
+  color: var(--silver);
+  text-decoration: none;
+  transition: all var(--transition-normal);
+}
+
+.contact-item a:hover {
+  color: var(--primary-color);
+  text-shadow: 0 0 5px var(--primary-color);
+}
+
+.contact-item span {
+  color: var(--silver);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--steel-gray);
+  padding-top: var(--spacing-lg);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.footer-bottom p {
+  color: var(--silver);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.footer-bottom a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all var(--transition-normal);
+}
+
+.footer-bottom a:hover {
+  color: var(--secondary-color);
+  text-shadow: 0 0 5px var(--secondary-color);
+}
+
+.footer-bottom div {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-bottom div a {
+  color: var(--silver);
+  font-size: 0.85rem;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  transition: all var(--transition-normal);
+}
+
+.footer-bottom div a:hover {
+  color: var(--primary-color);
+  background: rgba(255, 107, 53, 0.1);
+  text-shadow: 0 0 5px var(--primary-color);
+}
+
+/* Money animation in footer */
+.footer::after {
+  content: "💰";
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  animation: moneyFloat 4s ease-in-out infinite;
+  opacity: 0.3;
+}
+
+.footer::before {
+  content: "🎮";
+  position: absolute;
+  top: 60px;
+  right: 60px;
+  font-size: 1.5rem;
+  animation: float 3s ease-in-out infinite;
+  opacity: 0.2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  .footer-section h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .contact-info {
+    align-items: center;
+  }
+
+  .contact-item {
+    justify-content: center;
+  }
+
+  .footer-bottom div {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+}
+
+@media (min-width: 1280px) {
+  .footer-content {
+    padding: 0 var(--spacing-xl);
+  }
+}
+
+/* Arcade-style animations */
+@keyframes arcadeGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px var(--primary-color);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--primary-color), 0 0 30px var(--primary-color);
+  }
+}
+
+@keyframes moneyFloat {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-10px) rotate(-5deg);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
