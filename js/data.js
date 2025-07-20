@@ -109,7 +109,7 @@ const siteData = {
   ],
 
   contact: {
-    email: "connection@meetgamng.com",
+    email: "connection@2025 Meetgamng.com",
     phone: "+1 (393) 555-6868",
     address: "87 Main Street, Thunder Bay, Ontario P7A 1A1, Canada",
     mapLocation: "87 Main Street, Thunder Bay, Ontario P7A 1A1, Canada",

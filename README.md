@@ -29,10 +29,10 @@ A modern, responsive website for the "My Arcade Center" arcade management simula
 
 ## Contact
 
-- Email: connection@meetgamng.com
+- Email: connection@2025 Meetgamng.com
 - Phone: +1 (393) 555-6868
 - Address: 87 Main Street, Thunder Bay, Ontario P7A 1A1, Canada
 
 ## License
 
-All rights reserved - meetgamng.com
+All rights reserved - 2025 Meetgamng.com

@@ -10,7 +10,7 @@ function buildHeader() {
         <div class="header-content">
             <a href="./" class="logo">
                 <div class="logo-icon">🎮</div>
-                meetgamng.com
+                2025 Meetgamng.com
             </a>
             
             <nav class="nav">
@@ -108,7 +108,7 @@ function buildFooter() {
                     <div class="contact-info">
                         <div class="contact-item">
                             <span class="contact-icon">📧</span>
-                            <a href="mailto:connection@meetgamng.com">connection@meetgamng.com</a>
+                            <span>connection@2025 Meetgamng.com</span>
                         </div>
                         <div class="contact-item">
                             <span class="contact-icon">📞</span>
@@ -123,7 +123,7 @@ function buildFooter() {
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; <span class="copyright-year">${currentYear}</span> meetgamng.com - All rights reserved</p>
+                <p>&copy; <span class="copyright-year">${currentYear}</span> Meetgamng.com - All rights reserved</p>
                 <div style="margin-top: var(--spacing-sm);">
                     <a href="./arcade-cookies.html">Cookie Policy</a> | 
                     <a href="./arcade-privacy.html">Privacy Policy</a>
